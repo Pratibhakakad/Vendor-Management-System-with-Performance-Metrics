@@ -12,6 +12,8 @@ urlpatterns = [
     path('GET/api/purchase_order/<uuid:pk>',views.getPurchaseorderDetail),
     path('PUT/api/purchase_order/<uuid:pk>',views.updatePurchaseorder),
     path('DELETE/api/purchase_order/<uuid:pk>',views.deletePurchaseorder),
+    path('GET/api/vendors/{vendor_code}/performance',views.vendor_performance),
+    path('POST /api/purchase_orders/{po_number}/acknowledge',views.acknowledge_purchase_order),
     re_path('login',views.login),
     re_path('signup',views.signup),
     re_path('test_token',views.test_token),
